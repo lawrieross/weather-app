@@ -1,0 +1,25 @@
+@import './Responsive.scss';
+
+.b-today-highlights {
+  &__container {
+    position: relative;
+    padding: 0 20px 86px;
+  }
+
+  &__heading {
+    display: block;
+    width: 100%;
+    color: $text-lightgrey;
+    margin: 0 0 32px;
+  }
+
+  @media ($media-medium) {
+    &__container {
+      padding: 0 52px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+    }
+  }
+}

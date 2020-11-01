@@ -1,0 +1,147 @@
+.b-menu {
+  box-sizing: border-box;
+  padding: 60px 13px;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $bg-header;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    transform: translateX(-100%);
+
+    &.is-open {
+      transition-timing-function: ease-out;
+      transition: 0.25s;
+      transform: translateX(0);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    justify-content: flex-end;
+    padding: 17px 0;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      fill: $text-lightgrey;
+      height: 20px;
+      width: 20px;
+      padding-right: 17px;
+    }
+  }
+
+  &__search {
+    &-container {
+      position: relative;
+      display: flex;
+      height: 46px;
+      margin: 0 0 38px;
+    }
+
+    &-input {
+      color: $text-lightgrey;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      background-color: transparent;
+      height: 100%;
+      width: 100%;
+      outline: none;
+
+      &-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid $text-lightgrey;
+        height: 100%;
+        width: 100%;
+        margin: 0 12px 0 0;
+        padding: 0 0 0 50px;
+        box-sizing: border-box;
+
+        svg {
+          position: absolute;
+          left: 25px;
+          transform: translateX(-50%);
+          fill: $text-grey;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      &::placeholder {
+        color: $text-grey;
+      }
+    }
+
+    &-button {
+      background-color: $button-menu-search;
+      color: $text-lightgrey;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 0;
+      border: none;
+      padding: 14px;
+      cursor: pointer;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    background-color: transparent;
+    color: $text-lightgrey;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    text-align: left;
+    padding: 0 12px;
+    margin: 0 0 25px;
+    height: 62px;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $text-grey;
+
+      .b-menu__location-chevron {
+        display: flex;
+      }
+    }
+
+    &-chevron {
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        fill: $text-grey;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

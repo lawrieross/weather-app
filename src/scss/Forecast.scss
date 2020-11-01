@@ -1,0 +1,93 @@
+.b-forecast {
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('./../images/Cloud-background.png');
+    background-color: $bg-header;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: 50% 20%;
+    background-blend-mode: soft-light;
+    padding: 60px 0 105px;
+  }
+
+  &__img {
+    width: 100%;
+
+    &-container {
+      position: relative;
+      width: 40%;
+      padding: 0 0 40px;
+    }
+  }
+
+  &__temp {
+    font-size: 144px;
+    font-weight: 100;
+    margin: 0;
+
+    &-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: $text-lightgrey;
+      width: 45%;
+      margin-bottom: 23px;
+    }
+
+    &-scale {
+      transform: translateY(-50%);
+      color: $text-grey;
+      right: 0;
+      font-size: 40px;
+    }
+  }
+
+  &__conditions {
+    color: $text-grey;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 48px;
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-grey;
+
+    &-container {
+      margin: 0 0 33px;
+    }
+
+    &:last-child::before {
+      content: "\2022";
+      padding: 0 16px;
+    }
+  }
+
+  &__location {
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-grey;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-icon {
+      position: relative;
+      padding: 0 9px 0 0;
+      width: 28px;
+
+      svg {
+        fill: $text-grey;
+        width: 100%;
+      }
+    }
+  }
+}

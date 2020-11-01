@@ -1,0 +1,11 @@
+@import './Responsive.scss';
+
+.b-header {
+  background-color: $bg-header;
+  position: relative;
+
+  @media ($media-medium) {
+    min-height: 100vh;
+    width: 30%;
+  }
+}

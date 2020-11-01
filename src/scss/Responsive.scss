@@ -1,0 +1,9 @@
+$x-small: '576px';
+$small: '768px';
+$medium: '992px';
+$large: '1200px';
+
+$media-xsmall: 'min-width: #{$x-small}';
+$media-small: 'min-width: #{$small}';
+$media-medium: 'min-width: #{$medium}';
+$media-large: 'min-width: #{$large}';

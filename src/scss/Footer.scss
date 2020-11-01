@@ -1,0 +1,9 @@
+.b-footer {
+  &__text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: $text-footer;
+    margin: 0 0 34px;
+  }
+}

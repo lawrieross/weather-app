@@ -1,0 +1,29 @@
+@import './Colors.scss';
+@import './Font.scss';
+@import './Footer.scss';
+@import './Forecast.scss';
+@import './Header.scss';
+@import './Highlights.scss';
+@import './Menu.scss';
+@import './Navigation.scss';
+@import './Responsive.scss';
+@import './Today-Highlights.scss';
+@import './Weekday.scss';
+
+body {
+  background-color: $bg-default;
+
+  .b-weather {
+    position: relative;
+  }
+
+  @media ($media-medium) {
+    .b-weather {
+      display: flex;
+    }
+
+    .b-main {
+      width: 70%;
+    }
+  }
+}
