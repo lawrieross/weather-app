@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Weekday from './Weekday';
 import { WeatherIcons } from './WeatherIcons';
+import { Row } from 'react-flexbox-grid';
 
 const WeekdayForecast = (props) => {
   const {
@@ -50,7 +51,9 @@ const WeekdayForecast = (props) => {
 
   return (
     <section className="b-weekday__forecast-container">
-      {weekdays && weekdays}
+      <Row center="xs">
+        {weekdays && weekdays}
+      </Row>
     </section>
   );
 }

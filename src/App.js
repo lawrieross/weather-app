@@ -42,7 +42,7 @@ class App extends Component {
       document.body.classList.remove('is-nav-open');
     }
 
-    const endpoint = location ? `${API_HEADER}${location}` : `${API_HEADER}/1105779`;
+    const endpoint = location ? `${API_HEADER}${location}` : `${API_HEADER}1105779`;
 
     const getData = async () => await axios
       .get(endpoint)

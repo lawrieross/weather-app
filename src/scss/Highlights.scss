@@ -6,13 +6,8 @@
     background-color: $bg-header;
     color: $text-lightgrey;
     padding: 22px;
-    margin: 0 0 32px;
     text-align: center;
     box-sizing: border-box;
-
-    &:last-child {
-      margin: 0;
-    }
   }
 
   &__heading {
@@ -145,11 +140,7 @@
 
   @media ($media-medium) {
     &__container {
-      width: 45%;
-
-      &:last-child {
-        margin: 0 0 32px;
-      }
+      height: 100%;
     }
   }
 }

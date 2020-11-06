@@ -4,6 +4,10 @@
   &__container {
     position: relative;
     padding: 0 20px 86px;
+
+    .col-xs-12 {
+      margin-bottom: 20px;
+    }
   }
 
   &__heading {
@@ -15,11 +19,15 @@
 
   @media ($media-medium) {
     &__container {
-      padding: 0 52px;
+      padding: 0 52px 52px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      flex: 1 1 auto;
+
+      .row {
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }

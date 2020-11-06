@@ -1,5 +1,6 @@
 import React from 'react';
 import { days, months } from './Date';
+import { Col } from 'react-flexbox-grid';
 
 const Weekday = (props) => {
   const {
@@ -20,37 +21,39 @@ const Weekday = (props) => {
   }
 
   return (
-    <div className="b-weekday__container">
-      <span className="b-weekday__day">
-        {weekdayDate && weekdayDate}
-      </span>
+    <Col xs={12} md={4} xl>
+      <div className="b-weekday__container">
+        <span className="b-weekday__day">
+          {weekdayDate && weekdayDate}
+        </span>
 
-      <div className="b-weekday__icon-container">
-        {weatherStateIcon}
-      </div>
-
-      <div className="b-weekday__min-max-container">
-        <div className="b-weekday__max-container">
-          <span className="b-weekday__max">
-            {max}
-          </span>
-
-          <span className="b-weekday__max-scale">
-            &#8451;
-          </span>
+        <div className="b-weekday__icon-container">
+          {weatherStateIcon}
         </div>
 
-        <div className="b-weekday__min-container">
-          <span className="b-weekday__min">
-            {min}
-          </span>
+        <div className="b-weekday__min-max-container">
+          <div className="b-weekday__max-container">
+            <span className="b-weekday__max">
+              {max}
+            </span>
 
-          <span className="b-weekday__min-scale">
-            &#8451;
-          </span>
+            <span className="b-weekday__max-scale">
+              &#8451;
+            </span>
+          </div>
+
+          <div className="b-weekday__min-container">
+            <span className="b-weekday__min">
+              {min}
+            </span>
+
+            <span className="b-weekday__min-scale">
+              &#8451;
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </Col>
   );
 }
 

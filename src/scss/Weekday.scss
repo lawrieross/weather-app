@@ -7,6 +7,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 52px;
+
+    .col-xs-12 {
+      &:last-child {
+        .b-weekday__container {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   &__container {
@@ -16,11 +24,10 @@
     box-sizing: border-box;
     position: relative;
     background-color: $bg-header;
-    width: 45%;
     color: $text-lightgrey;
     text-align: center;
     padding: 18px;
-    margin: 0 0 32px;
+    margin-bottom: 52px;
   }
 
   &__icon {
@@ -53,21 +60,21 @@
     color: $text-grey;
   }
 
-  @media ($media-medium) {
-    &__container {
-      margin: 20px;
-      width: 25%;
-      flex: 1 1 auto;
-    }
-
+  @media (min-width: 768px) {
     &__forecast-container {
       justify-content: center;
-    }
-  }
 
-  @media ($media-large) {
+      .row {
+        margin: 0;
+      }
+
+      .col-xs-12 {
+        padding-bottom: 16px;
+      }
+    }
+
     &__container {
-      width: 15%;
+      height: 100%;
     }
   }
 }

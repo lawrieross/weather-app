@@ -3,6 +3,7 @@ import AirPressure from './AirPressure';
 import Humidity from './Humidity';
 import Visibility from './Visibility';
 import Wind from './Wind';
+import { Row, Col } from 'react-flexbox-grid';
 
 const TodayHighlights = (props) => {
   const {
@@ -41,17 +42,27 @@ const TodayHighlights = (props) => {
         Today's Highlights
       </h3>
 
-      <Wind
-        windAngle={windAngle}
-        windSpeed={windSpeed}
-        windDirection={windDirection}
-      />
+      <Row>
+        <Col xs={12} md={6}>
+          <Wind
+            windAngle={windAngle}
+            windSpeed={windSpeed}
+            windDirection={windDirection}
+          />
+        </Col>
 
-      <Humidity humidityValue={humidityValue} />
+        <Col xs={12} md={6}>
+          <Humidity humidityValue={humidityValue} />
+        </Col>
 
-      <Visibility visibilityValue={visibilityValue} />
+        <Col xs={12} md={6}>
+          <Visibility visibilityValue={visibilityValue} />
+        </Col>
 
-      <AirPressure airPressure={airPressure} />
+        <Col xs={12} md={6}>
+          <AirPressure airPressure={airPressure} />
+        </Col>
+      </Row>
     </section>
   );
 }
