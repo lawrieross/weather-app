@@ -45,7 +45,11 @@ class App extends Component {
     const endpoint = location ? `${API_HEADER}${location}` : `${API_HEADER}1105779`;
 
     const getData = async () => await axios
-      .get(endpoint)
+      .get(endpoint, {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
       .then(res => res.data);
 
     return (
