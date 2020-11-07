@@ -6,7 +6,7 @@ import WeekdayForecast from './components/WeekdayForecast';
 import TodayHighlights from './components/TodayHighlights';
 import './scss/App.scss';
 
-export const API_HEADER = 'https://www.metaweather.com/api/location/';
+export const API_HEADER = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/';
 
 class App extends Component {
   state = {
@@ -45,11 +45,7 @@ class App extends Component {
     const endpoint = location ? `${API_HEADER}${location}` : `${API_HEADER}1105779`;
 
     const getData = async () => await axios
-      .get(endpoint, {
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      })
+      .get(endpoint)
       .then(res => res.data);
 
     return (
